@@ -65,7 +65,8 @@ int main() {
             printf("%c ", items[i]);
         }
     }
-    printf("%c\n", items[last]);
+    printf("%c", items[last]);
+    printf("\n");
 
     return 0;
 }
