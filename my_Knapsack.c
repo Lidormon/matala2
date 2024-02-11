@@ -5,7 +5,6 @@
 
 
 int dp[N+1][W+1];
-int last=0;
 
 
 int max(int a, int b) {
@@ -32,8 +31,6 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
             w -= weights[i - 1];
         }
         i--;
-        if(w<=0)
-            last=i-1;
     }
     
     
@@ -59,14 +56,13 @@ int main() {
     int max_profit = knapSack(weights, values, selected_bool);
 
     printf("Maximum profit: %d\n",max_profit);
-    printf("Selected items: ");
+    printf("Selected items:  ");
     for (i = 0; i < N; i++) {
-        if (selected_bool[i]&&i!=last) {
+        if (selected_bool[i]) {
             printf("%c ", items[i]);
+            
         }
     }
-    printf("%c", items[last]);
-    printf("\n");
 
     return 0;
 }
