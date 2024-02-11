@@ -33,7 +33,7 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
         }
         i--;
         if(w<=0)
-            last=i;
+            last=i-1;
     }
     
     
