@@ -56,13 +56,13 @@ int main() {
     int max_profit = knapSack(weights, values, selected_bool);
 
     printf("Maximum profit: %d\n",max_profit);
-    printf("Selected items:  ");
+    printf("Selected items:");
     for (i = 0; i < N; i++) {
         if (selected_bool[i]) {
-            printf("%c ", items[i]);
+            printf(" %c", items[i]);
             
         }
     }
-
+    printf("\n");
     return 0;
 }
